@@ -53,11 +53,11 @@ php artisan serve
 # password 123456! 
 
 ```
-<p> Login WEB </p>
-silahkan login ke web dengan akun seperti diatas
+### Login WEB 
+silahkan login ke web, buka url http://127.0.0.1:8000/. lalu login dengan akun seperti diatas
 
-<p> Login API </p>
-buka postman, atau via curl. lalu login dengan endpoint POST
+### Login API
+buka postman, apidog, atau via curl. lalu login dengan endpoint POST
 
 ``` bash
 
