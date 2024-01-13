@@ -26,6 +26,8 @@ cp .env.example .env
 
 php artisan key:generate
 
+#buka .env
+
 #buat database sesuai aplikasi anda
 #lalu ubah aturan database sesuai aplikasi anda, contoh
 
@@ -50,6 +52,36 @@ php artisan serve
 # username admin@local.test
 # password 123456! 
 
+```
+<p> Login WEB </p>
+silahkan login ke web dengan akun seperti diatas
+
+<p> Login API </p>
+buka postman, atau via curl. lalu login dengan endpoint POST
+
+``` bash
+
+POST http://localhost:8000/api/auth/login
+```
+contoh dengan curl
+``` bash
+curl --location --request POST 'http://localhost:8000/api/auth/login' \
+--header 'Accept: Application/json' \
+--header 'User-Agent: Apidog/1.0.0' \
+--form 'email="admin@local.test"' \
+--form 'password="123456!"'
+```
+
+setelah berhasil, ambil token dari respon. dan coba akses url berikut ini
+``` bash
+GET http://localhost:8000/api/user
+
+#contoh
+
+curl --location --request GET 'http://localhost:8000/api/user' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer <token>' \
+--header 'User-Agent: Apidog/1.0.0'
 ```
 ### Terimakasih semoga bisa membantu : Ade Iskandar
 
