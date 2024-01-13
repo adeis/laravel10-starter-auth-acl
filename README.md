@@ -7,6 +7,54 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+
+## Starter auth + acl laravel 10
+
+di repo ini sudah disediakan project awal laravel, dengan login/register (laravel/ui), juga ACL dengan metode RBAC (Role Base Access Controll) yaitu kendali access berdasarkan role atau peran, jadi permisi dikumpulkan dalam satu peran, sehingga bisa lebih dinamis. 
+
+### Cara Install 
+<p> Pastikan anda sudah mengikuti requirement dari laravel, silahkan baca doc laravel terlebih dahulu, lalu ikuti langkah ini</p>
+
+```bash
+git clone https://github.com/adeis/laravel10-starter-auth-acl.git
+
+cd laravel10-starter-auth-acl
+
+composer install
+
+cp .env.example .env
+
+php artisan key:generate
+
+#buat database sesuai aplikasi anda
+#lalu ubah aturan database sesuai aplikasi anda, contoh
+
+#DB_DATABASE=laravel
+#DB_USERNAME=root
+#DB_PASSWORD=secret
+
+#lalu jalan migrasi database
+php artisan migrate:fresh --seed
+
+#perintah diatas sudah memasukkan data seeder, yang ada untuk login admin
+
+npm install
+
+npm run build
+
+php artisan serve
+
+#buka url yang tertera, biasanya http://127.0.0.1:8000/
+
+# login dengan :
+# username admin@local.test
+# password 123456! 
+
+```
+### Terimakasih semoga bisa membantu : Ade Iskandar
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
